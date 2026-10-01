@@ -1,0 +1,1 @@
+User-agent: *\nAllow: /\nSitemap: https://abdielabrek69.github.io/abrek-systems/sitemap.xml\n

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Demo interactiva de sistema de tickets de soporte técnico — proyecto de muestra de Abdiel Abrek.">
+<title>Demo | Sistema de Tickets — Abdiel Abrek</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/demo.css">
+<script src="js/demo.js" defer></script>
+</head>
+<body class="demo-body">
+<header class="header">
+  <nav class="nav container" aria-label="Navegación">
+    <a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><span><strong>ABDIEL <b>ABREK</b></strong><small>Ingeniería en Sistemas y TI</small></span></a>
+    <a class="btn outline" href="index.html">← Volver al portafolio</a>
+  </nav>
+</header>
+<main class="demo-main">
+  <div class="container">
+    <div class="demo-heading">
+      <p class="eyebrow">PROYECTO DE MUESTRA · FRONT-END</p>
+      <h1>Sistema de Tickets de Soporte</h1>
+      <p>Demostración funcional desarrollada con HTML, CSS y JavaScript. Los datos se guardan únicamente en el navegador mediante <strong>localStorage</strong>; no requiere PHP, servidor ni base de datos externa.</p>
+    </div>
+    <div class="demo-grid">
+      <section class="demo-panel">
+        <div class="panel-head"><div><span class="project-type">Nueva incidencia</span><h2>Crear ticket</h2></div></div>
+        <form id="ticketForm">
+          <label>Solicitante<input id="requester" required placeholder="Nombre del usuario"></label>
+          <label>Área<select id="area"><option>Soporte TI</option><option>Impresoras</option><option>Redes</option><option>Software</option><option>Hardware</option></select></label>
+          <label>Prioridad<select id="priority"><option>Baja</option><option selected>Media</option><option>Alta</option><option>Crítica</option></select></label>
+          <label>Asunto<input id="subject" required placeholder="Ej. No puedo imprimir"></label>
+          <label>Descripción<textarea id="description" required rows="4" placeholder="Describe brevemente la incidencia"></textarea></label>
+          <button class="btn primary" type="submit">Crear ticket</button>
+          <button class="btn secondary" type="button" id="seedBtn">Cargar ejemplos</button>
+        </form>
+        <div class="demo-note">⚙ Demo local: los cambios se conservan en este navegador.</div>
+      </section>
+      <section class="demo-panel">
+        <div class="panel-head tickets-head">
+          <div><span class="project-type">Mesa de ayuda</span><h2>Incidencias</h2></div>
+          <button class="btn secondary small" id="clearBtn" type="button">Limpiar</button>
+        </div>
+        <div class="stats">
+          <div><b id="totalCount">0</b><span>Total</span></div>
+          <div><b id="openCount">0</b><span>Abiertos</span></div>
+          <div><b id="progressCount">0</b><span>En proceso</span></div>
+          <div><b id="closedCount">0</b><span>Cerrados</span></div>
+        </div>
+        <div id="ticketList" class="ticket-list" aria-live="polite"></div>
+      </section>
+    </div>
+    <div class="demo-footer"><strong>Proyecto de muestra:</strong> esta demo sirve para demostrar lógica de interfaz, gestión de estados, filtros y persistencia local. No se presenta como un sistema empresarial actualmente desplegado.</div>
+  </div>
+</main>
+</body>
+</html>
