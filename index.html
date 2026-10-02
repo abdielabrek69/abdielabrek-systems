@@ -3,70 +3,1527 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <meta name="description" content="Portafolio profesional de Abdiel Abrek, Ingeniero en Sistemas y TI especializado en soporte TI, infraestructura, redes, desarrollo web y ciberseguridad.">
+
 <meta name="theme-color" content="#05070a">
+
 <title>Abdiel Abrek | Systems & IT</title>
+
+<!-- Favicon / icono de TI -->
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="alternate icon" href="assets/favicon.svg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="css/styles.css">
-<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.180.0/build/three.module.js"}}</script>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.180.0/build/three.module.js"
+  }
+}
+</script>
+
 <script type="module" src="js/scene.js"></script>
 <script defer src="js/main.js"></script>
+
+<!-- Ajustes visuales -->
+<style>
+
+/* ================================
+   NOMBRE PRINCIPAL MÁS PEQUEÑO
+================================ */
+
+.hero-title {
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+}
+
+
+/* ================================
+   BOTÓN VER PROYECTO
+================================ */
+
+.project-info .text-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1.25rem;
+
+    padding: 0.75rem 1.15rem;
+
+    border: 1px solid rgba(70, 150, 255, 0.45);
+    border-radius: 4px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+    letter-spacing: 0.03em;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-info .text-link:hover {
+    background: #1d4ed8;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 24px rgba(37, 99, 235, 0.25);
+}
+
+</style>
+
 </head>
+
 <body>
+
 <div class="noise"></div>
 <div class="cursor-glow"></div>
+
+
+<!-- ================================
+     HEADER
+================================ -->
+
 <header class="header" id="inicio">
+
 <nav class="nav container">
-<a class="brand" href="#inicio"><span class="brand-mark">&lt;/&gt;</span><span><strong>ABDIEL <b>ABREK</b></strong><strong>CASTELAN <b>DOMINGUEZ</b></strong><small>SYSTEMS &amp; IT</small></span></a>
-<button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-<ul class="nav-links"><li><a class="active" href="#inicio">Inicio</a></li><li><a href="#sobre-mi">Sobre mí</a></li><li><a href="#experiencia">Experiencia</a></li><li><a href="#habilidades">Habilidades</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#contacto">Contacto</a></li></ul>
+
+<a class="brand" href="#inicio">
+
+    <span class="brand-mark">&lt;/&gt;</span>
+
+    <span>
+
+        <strong>ABDIEL <b>ABREK</b></strong>
+
+        <strong>CASTELAN <b>DOMINGUEZ</b></strong>
+
+        <small>SYSTEMS &amp; IT</small>
+
+    </span>
+
+</a>
+
+
+<button
+    class="menu-toggle"
+    aria-label="Abrir menú"
+    aria-expanded="false">
+    ☰
+</button>
+
+
+<ul class="nav-links">
+
+    <li>
+        <a class="active" href="#inicio">
+            Inicio
+        </a>
+    </li>
+
+    <li>
+        <a href="#sobre-mi">
+            Sobre mí
+        </a>
+    </li>
+
+    <li>
+        <a href="#experiencia">
+            Experiencia
+        </a>
+    </li>
+
+    <li>
+        <a href="#habilidades">
+            Habilidades
+        </a>
+    </li>
+
+    <li>
+        <a href="#proyectos">
+            Proyectos
+        </a>
+    </li>
+
+    <li>
+        <a href="#contacto">
+            Contacto
+        </a>
+    </li>
+
+</ul>
+
 </nav>
+
 </header>
+
+
 <main>
+
+
+<!-- ================================
+     HERO
+================================ -->
+
 <section class="hero" id="hero">
+
 <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
 <div class="hero-grid"></div>
+
+
 <div class="container hero-content">
-<div class="hero-meta"><span class="status-dot"></span><span>AVAILABLE FOR IT OPPORTUNITIES</span><span class="meta-line"></span><span>MX / 2026</span></div>
-<p class="eyebrow reveal">INGENIERO EN SISTEMAS Y TECNOLOGÍAS DE LA INFORMACIÓN</p>
-<h1 class="hero-title reveal">ABDIEL<br><span>ABREK</span></h1>
-<div class="hero-sub reveal"><span class="typing">Soporte TI · Infraestructura · Redes · Desarrollo Web · Ciberseguridad</span></div>
-<p class="hero-copy reveal">Profesional de TI con experiencia en soporte técnico, mantenimiento de equipos, redes, plataformas LMS y desarrollo de soluciones web. Enfocado en diagnóstico, resolución de incidencias y tecnología funcional.</p>
-<div class="hero-actions reveal"><a class="btn primary" href="#proyectos">Explorar proyectos <span>↗</span></a><a class="btn ghost" href="assets/CV_Abdiel_Castelan_Dominguez.pdf" target="_blank" rel="noopener">Descargar CV</a></div>
-<div class="hero-scroll"><span>SCROLL TO EXPLORE</span><i></i></div>
+
+<div class="hero-meta">
+
+    <span class="status-dot"></span>
+
+    <span>AVAILABLE FOR IT OPPORTUNITIES</span>
+
+    <span class="meta-line"></span>
+
+    <span>MX / 2026</span>
+
 </div>
-<div class="hero-side">01 — SYSTEMS<br>02 — NETWORKS<br>03 — SECURITY</div>
+
+
+<p class="eyebrow reveal">
+    INGENIERO EN SISTEMAS Y TECNOLOGÍAS DE LA INFORMACIÓN
+</p>
+
+
+<h1 class="hero-title reveal">
+
+    ABDIEL<br>
+
+    <span>ABREK</span>
+
+</h1>
+
+
+<div class="hero-sub reveal">
+
+    <span class="typing">
+        Soporte TI · Infraestructura · Redes · Desarrollo Web · Ciberseguridad
+    </span>
+
+</div>
+
+
+<p class="hero-copy reveal">
+
+    Profesional de TI con experiencia en soporte técnico,
+    mantenimiento de equipos, redes, plataformas LMS y
+    desarrollo de soluciones web. Enfocado en diagnóstico,
+    resolución de incidencias y tecnología funcional.
+
+</p>
+
+
+<div class="hero-actions reveal">
+
+<a class="btn primary" href="#proyectos">
+
+    Explorar proyectos
+    <span>↗</span>
+
+</a>
+
+
+<a
+    class="btn ghost"
+    href="assets/CV_Abdiel_Castelan_Dominguez.pdf"
+    target="_blank"
+    rel="noopener">
+
+    Descargar CV
+
+</a>
+
+</div>
+
+
+<div class="hero-scroll">
+
+    <span>SCROLL TO EXPLORE</span>
+
+    <i></i>
+
+</div>
+
+</div>
+
+
+<div class="hero-side">
+
+    01 — SYSTEMS<br>
+    02 — NETWORKS<br>
+    03 — SECURITY
+
+</div>
+
 </section>
-<section class="section intro" id="sobre-mi"><div class="container split"><div class="section-index">01 / PROFILE</div><div><p class="eyebrow reveal">PERFIL PROFESIONAL</p><h2 class="reveal">Tecnología con enfoque<br><em>práctico.</em></h2><p class="lead reveal">Soy Ingeniero en Sistemas y Tecnologías de la Información con experiencia práctica en soporte TI, mantenimiento, redes, desarrollo web y administración de plataformas.</p><p class="reveal">He trabajado atendiendo incidencias, configurando hardware y software, dando soporte presencial y remoto, desarrollando soluciones web y administrando Blackboard y Moodle. También cuento con formación práctica en ciberseguridad.</p><div class="facts reveal"><div><b>2017–HOY</b><span>Trayectoria profesional</span></div><div><b>TI</b><span>Soporte e infraestructura</span></div><div><b>IEU</b><span>Ingeniería en Sistemas</span></div></div></div></div></section>
-<section class="section experience" id="experiencia"><div class="container"><div class="section-heading"><div class="section-index">02 / EXPERIENCE</div><p class="eyebrow reveal">TRAYECTORIA</p><h2 class="reveal">Experiencia profesional</h2></div><div class="timeline">
-<article class="timeline-item reveal"><div class="timeline-date">MAR 2026 — SEP 2026</div><div class="timeline-content"><span class="role-type">SERVICIO SOCIAL</span><h3>Ejecutivo de Plataformas LMS</h3><p class="company">Administración de plataformas académicas</p><ul><li>Administración y configuración de Blackboard y Moodle.</li><li>Organización y clonación de cursos, Templates, Learning Modules y restricciones.</li><li>Configuración y seguimiento de sesiones Microsoft Teams.</li><li>Identificación y corrección de inconsistencias en cursos y contenidos.</li><li>Atención y seguimiento de requerimientos LMS.</li></ul><div class="chips"><span>Blackboard</span><span>Moodle</span><span>Teams</span><span>LMS</span></div></div></article>
-<article class="timeline-item reveal"><div class="timeline-date">SEP 2020 — ACTUALIDAD</div><div class="timeline-content"><span class="role-type">ACTIVIDAD PROFESIONAL</span><h3>Técnico Especialista en TI / Desarrollo Web</h3><p class="company">INKTONER WEB &amp; SYSTEM</p><ul><li>Diagnóstico y mantenimiento preventivo/correctivo de equipos e impresión.</li><li>Soporte técnico presencial y remoto.</li><li>Instalación y configuración de hardware, software y dispositivos.</li><li>Desarrollo web con PHP, JavaScript, HTML5, CSS3 y MySQL.</li><li>E-commerce, blogs, landing pages, MVC y APIs REST.</li></ul><div class="chips"><span>Soporte TI</span><span>Hardware</span><span>Redes</span><span>PHP</span><span>MySQL</span></div></div></article>
-<article class="timeline-item reveal"><div class="timeline-date">DIC 2021 — 2025</div><div class="timeline-content"><span class="role-type">OPERACIÓN</span><h3>Monitorista GPS / Supervisor de Unidades</h3><p class="company">INVIMEX</p><ul><li>Monitoreo en tiempo real mediante sistemas GPS.</li><li>Reportes operativos y validación de información mediante CRM.</li><li>Supervisión de cámaras y dispositivos de seguridad.</li><li>Tickets por fallas técnicas de equipos GPS.</li><li>Análisis de eventos, alertas y bitácoras.</li></ul><div class="chips"><span>GPS</span><span>CRM</span><span>Monitoreo</span><span>Incidencias</span></div></div></article>
-<article class="timeline-item reveal"><div class="timeline-date">AGO 2017 — DIC 2021</div><div class="timeline-content"><span class="role-type">SOPORTE TI</span><h3>Técnico Especialista en TI / Encargado de Sucursal</h3><p class="company">M TÓNER Y SISTEMAS</p><ul><li>Diagnóstico, mantenimiento y reparación de equipos e impresoras.</li><li>Instalación y configuración de hardware, software y redes.</li><li>Soporte técnico a clientes empresariales y particulares.</li><li>Inventarios, pedidos, facturación y operación de sucursal.</li></ul><div class="chips"><span>Hardware</span><span>Redes</span><span>Impresoras</span><span>Soporte</span></div></div></article>
-</div></div></section>
-<section class="section skills" id="habilidades"><div class="container"><div class="section-heading centered"><div class="section-index">03 / SKILLS</div><p class="eyebrow reveal">CONOCIMIENTOS</p><h2 class="reveal">Stack técnico</h2><p class="reveal">Conocimientos adquiridos mediante experiencia profesional, proyectos y formación continua.</p></div><div class="skill-grid">
-<article class="skill-card reveal"><span class="skill-no">01</span><div class="skill-icon">▣</div><h3>Soporte &amp; infraestructura</h3><p>Hardware, software, mantenimiento, instalación, configuración y resolución de incidencias.</p><div class="skill-tags"><span>Windows</span><span>Hardware</span><span>Help Desk</span></div></article>
-<article class="skill-card reveal"><span class="skill-no">02</span><div class="skill-icon">⌁</div><h3>Redes</h3><p>TCP/IP, DNS, DHCP, VLAN, routing, switching, Cisco y fundamentos de cableado.</p><div class="skill-tags"><span>TCP/IP</span><span>DNS</span><span>DHCP</span></div></article>
-<article class="skill-card reveal"><span class="skill-no">03</span><div class="skill-icon">&lt;/&gt;</div><h3>Desarrollo web</h3><p>PHP, JavaScript, HTML5, CSS3, MySQL, MVC, e-commerce y APIs REST.</p><div class="skill-tags"><span>PHP</span><span>JS</span><span>MySQL</span></div></article>
-<article class="skill-card reveal"><span class="skill-no">04</span><div class="skill-icon">⬡</div><h3>Ciberseguridad</h3><p>Análisis de tráfico, vulnerabilidades, reconocimiento y pentesting controlado.</p><div class="skill-tags"><span>Wireshark</span><span>Nmap</span><span>CTF</span></div></article>
-<article class="skill-card reveal"><span class="skill-no">05</span><div class="skill-icon">◉</div><h3>Plataformas LMS</h3><p>Blackboard, Moodle, Templates, clonación de cursos, módulos y restricciones.</p><div class="skill-tags"><span>Blackboard</span><span>Moodle</span></div></article>
-<article class="skill-card reveal"><span class="skill-no">06</span><div class="skill-icon">▤</div><h3>Datos &amp; servicios</h3><p>MySQL, Workbench, Firebase Authentication, Realtime Database y fundamentos de MongoDB.</p><div class="skill-tags"><span>Firebase</span><span>SQL</span><span>MongoDB</span></div></article>
-</div></div></section>
-<section class="section credentials"><div class="container split credentials-grid"><div><div class="section-index">04 / EDUCATION</div><p class="eyebrow reveal">FORMACIÓN</p><h2 class="reveal">Aprendizaje continuo.</h2><div class="credential reveal"><b>Ingeniería en Sistemas y Tecnologías de la Información</b><span>IEU · 2022–2025</span><small>Título en trámite</small></div><div class="credential reveal"><b>Técnico en Informática</b><span>CBTA 185 · 2007–2010</span></div></div><div class="cert-list"><div class="cert reveal"><span>✓</span><div><b>Hacker Ético</b><small>Cisco Networking Academy / IEU</small></div></div><div class="cert reveal"><span>⌁</span><div><b>Ethical Hacker Jr.</b><small>Cisco Networking Academy · En curso</small></div></div><div class="cert reveal"><span>★</span><div><b>Capture the Flag 2026</b><small>Cisco Networking Academy · Reconocimiento de logro</small></div></div><div class="cert reveal"><span>+</span><div><b>Formación complementaria</b><small>Inglés y actualización en ciberseguridad</small></div></div></div></div></section>
-<section class="section projects" id="proyectos"><div class="container"><div class="section-heading"><div class="section-index">05 / PROJECTS</div><p class="eyebrow reveal">PROYECTOS DESTACADOS</p><h2 class="reveal">Trabajo aplicado.</h2></div><div class="project-grid">
-<article class="project-card reveal"><div class="project-visual terminal"><div class="terminal-head"><i></i><i></i><i></i><span>ticket-system.js</span></div><pre><span>const</span> ticket = {
-  priority: <b>"high"</b>,
-  status: <b>"open"</b>,
-  support: <b>true</b>
-};</pre></div><div class="project-info"><span class="project-type">DEMO FUNCIONAL</span><h3>Sistema de tickets</h3><p>Mesa de ayuda front-end con creación de tickets, prioridades, estados, estadísticas y LocalStorage.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="text-link" href="demo.html">Ver demo ↗</a></div></article>
-<article class="project-card reveal"><div class="project-visual code-grid"><span>&lt;/&gt;</span><div class="orbit"></div><div class="orbit two"></div></div><div class="project-info"><span class="project-type">PROYECTO REAL</span><h3>INKTONER WEB &amp; SYSTEM</h3><p>Sitio y soluciones para soporte TI, impresión, consumibles, desarrollo web y servicios tecnológicos.</p><div class="chips"><span>Web</span><span>SEO</span><span>JavaScript</span></div></div></article>
-<article class="project-card reveal"><div class="project-visual mobile-visual"><div class="phone"><div class="map-dot"></div><div class="map-route"></div></div><span>GPS / MAPS</span></div><div class="project-info"><span class="project-type">PRÁCTICAS PROFESIONALES</span><h3>App de geolocalización</h3><p>Aplicación para geolocalización y monitoreo de activos, autenticación, datos y servicios de mapas.</p><div class="chips"><span>Android</span><span>Firebase</span><span>Maps</span></div></div></article>
-<article class="project-card reveal"><div class="project-visual security-visual"><div class="rings"></div><span>SECURITY</span><div class="scan"></div></div><div class="project-info"><span class="project-type">FORMACIÓN PRÁCTICA</span><h3>Laboratorios de ciberseguridad</h3><p>Prácticas de análisis de tráfico, reconocimiento e identificación de vulnerabilidades en entornos controlados.</p><div class="chips"><span>Wireshark</span><span>Nmap</span><span>Metasploit</span><span>CTF</span></div></div></article>
-</div><div class="github-cta reveal"><div><span class="eyebrow">OPEN SOURCE / CODE</span><h3>Explora mi código.</h3><p>Repositorios, código fuente y proyectos disponibles en GitHub.</p></div><a class="btn primary" href="https://github.com/abdielabrek69" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
-<section class="section strengths"><div class="container strengths-grid"><div><div class="section-index">06 / APPROACH</div><p class="eyebrow reveal">MI FORMA DE TRABAJAR</p><h2 class="reveal">Resolver.<br><em>Aprender.</em><br>Mejorar.</h2></div><div class="strength-list"><div class="reveal"><span>01</span><p><b>Resolución de problemas</b><small>Diagnóstico ordenado y búsqueda de soluciones prácticas.</small></p></div><div class="reveal"><span>02</span><p><b>Atención a usuarios</b><small>Comunicación clara, seguimiento y orientación al servicio.</small></p></div><div class="reveal"><span>03</span><p><b>Análisis y organización</b><small>Priorización de tareas y seguimiento de incidencias.</small></p></div><div class="reveal"><span>04</span><p><b>Adaptabilidad</b><small>Capacidad para aprender herramientas, tecnologías y procesos.</small></p></div></div></div></section>
-<section class="contact" id="contacto"><div class="container contact-inner"><div><div class="section-index">07 / CONTACT</div><p class="eyebrow reveal">CONTACTO</p><h2 class="reveal">Construyamos algo<br><em>útil.</em></h2><p class="reveal">Estoy interesado en oportunidades profesionales relacionadas con soporte TI, infraestructura, redes, sistemas y tecnología.</p><a class="btn primary reveal" href="assets/CV_Abdiel_Castelan_Dominguez.pdf" target="_blank" rel="noopener">Descargar CV ↗</a></div><div class="contact-links reveal"><a href="mailto:abdiel.abrek@gmail.com">✉ abdiel.abrek@gmail.com</a><a href="tel:+522226955878">☏ 222 695 5878</a><a href="https://wa.me/522226955878?text=Hola%20Abdiel%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte." target="_blank" rel="noopener">WhatsApp ↗</a><a href="https://github.com/abdielabrek69" target="_blank" rel="noopener">github.com/abdielabrek69 ↗</a></div></div></section>
+
+
+
+<!-- ================================
+     SOBRE MÍ
+================================ -->
+
+<section class="section intro" id="sobre-mi">
+
+<div class="container split">
+
+<div class="section-index">
+    01 / PROFILE
+</div>
+
+
+<div>
+
+<p class="eyebrow reveal">
+    PERFIL PROFESIONAL
+</p>
+
+
+<h2 class="reveal">
+
+    Tecnología con enfoque<br>
+
+    <em>práctico.</em>
+
+</h2>
+
+
+<p class="lead reveal">
+
+    Soy Ingeniero en Sistemas y Tecnologías de la Información
+    con experiencia práctica en soporte TI, mantenimiento,
+    redes, desarrollo web y administración de plataformas.
+
+</p>
+
+
+<p class="reveal">
+
+    He trabajado atendiendo incidencias, configurando hardware
+    y software, dando soporte presencial y remoto, desarrollando
+    soluciones web y administrando Blackboard y Moodle.
+    También cuento con formación práctica en ciberseguridad.
+
+</p>
+
+
+<div class="facts reveal">
+
+<div>
+
+    <b>2017–HOY</b>
+
+    <span>Trayectoria profesional</span>
+
+</div>
+
+
+<div>
+
+    <b>TI</b>
+
+    <span>Soporte e infraestructura</span>
+
+</div>
+
+
+<div>
+
+    <b>IEU</b>
+
+    <span>Ingeniería en Sistemas</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     EXPERIENCIA
+================================ -->
+
+<section class="section experience" id="experiencia">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="section-index">
+    02 / EXPERIENCE
+</div>
+
+<p class="eyebrow reveal">
+    TRAYECTORIA
+</p>
+
+<h2 class="reveal">
+    Experiencia profesional
+</h2>
+
+</div>
+
+
+<div class="timeline">
+
+
+<article class="timeline-item reveal">
+
+<div class="timeline-date">
+    MAR 2026 — SEP 2026
+</div>
+
+
+<div class="timeline-content">
+
+<span class="role-type">
+    SERVICIO SOCIAL
+</span>
+
+
+<h3>
+    Ejecutivo de Plataformas LMS
+</h3>
+
+
+<p class="company">
+    Administración de plataformas académicas
+</p>
+
+
+<ul>
+
+<li>
+    Administración y configuración de Blackboard y Moodle.
+</li>
+
+<li>
+    Organización y clonación de cursos, Templates,
+    Learning Modules y restricciones.
+</li>
+
+<li>
+    Configuración y seguimiento de sesiones Microsoft Teams.
+</li>
+
+<li>
+    Identificación y corrección de inconsistencias
+    en cursos y contenidos.
+</li>
+
+<li>
+    Atención y seguimiento de requerimientos LMS.
+</li>
+
+</ul>
+
+
+<div class="chips">
+
+<span>Blackboard</span>
+<span>Moodle</span>
+<span>Teams</span>
+<span>LMS</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<article class="timeline-item reveal">
+
+<div class="timeline-date">
+    SEP 2020 — ACTUALIDAD
+</div>
+
+
+<div class="timeline-content">
+
+<span class="role-type">
+    ACTIVIDAD PROFESIONAL
+</span>
+
+
+<h3>
+    Técnico Especialista en TI / Desarrollo Web
+</h3>
+
+
+<p class="company">
+    INKTONER WEB &amp; SYSTEM
+</p>
+
+
+<ul>
+
+<li>
+    Diagnóstico y mantenimiento preventivo/correctivo
+    de equipos e impresión.
+</li>
+
+<li>
+    Soporte técnico presencial y remoto.
+</li>
+
+<li>
+    Instalación y configuración de hardware,
+    software y dispositivos.
+</li>
+
+<li>
+    Desarrollo web con PHP, JavaScript, HTML5,
+    CSS3 y MySQL.
+</li>
+
+<li>
+    E-commerce, blogs, landing pages, MVC y APIs REST.
+</li>
+
+</ul>
+
+
+<div class="chips">
+
+<span>Soporte TI</span>
+<span>Hardware</span>
+<span>Redes</span>
+<span>PHP</span>
+<span>MySQL</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<article class="timeline-item reveal">
+
+<div class="timeline-date">
+    DIC 2021 — 2025
+</div>
+
+
+<div class="timeline-content">
+
+<span class="role-type">
+    OPERACIÓN
+</span>
+
+
+<h3>
+    Monitorista GPS / Supervisor de Unidades
+</h3>
+
+
+<p class="company">
+    INVIMEX
+</p>
+
+
+<ul>
+
+<li>
+    Monitoreo en tiempo real mediante sistemas GPS.
+</li>
+
+<li>
+    Reportes operativos y validación de información
+    mediante CRM.
+</li>
+
+<li>
+    Supervisión de cámaras y dispositivos de seguridad.
+</li>
+
+<li>
+    Tickets por fallas técnicas de equipos GPS.
+</li>
+
+<li>
+    Análisis de eventos, alertas y bitácoras.
+</li>
+
+</ul>
+
+
+<div class="chips">
+
+<span>GPS</span>
+<span>CRM</span>
+<span>Monitoreo</span>
+<span>Incidencias</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<article class="timeline-item reveal">
+
+<div class="timeline-date">
+    AGO 2017 — DIC 2021
+</div>
+
+
+<div class="timeline-content">
+
+<span class="role-type">
+    SOPORTE TI
+</span>
+
+
+<h3>
+    Técnico Especialista en TI / Encargado de Sucursal
+</h3>
+
+
+<p class="company">
+    M TÓNER Y SISTEMAS
+</p>
+
+
+<ul>
+
+<li>
+    Diagnóstico, mantenimiento y reparación
+    de equipos e impresoras.
+</li>
+
+<li>
+    Instalación y configuración de hardware,
+    software y redes.
+</li>
+
+<li>
+    Soporte técnico a clientes empresariales y particulares.
+</li>
+
+<li>
+    Inventarios, pedidos, facturación y operación de sucursal.
+</li>
+
+</ul>
+
+
+<div class="chips">
+
+<span>Hardware</span>
+<span>Redes</span>
+<span>Impresoras</span>
+<span>Soporte</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     HABILIDADES
+================================ -->
+
+<section class="section skills" id="habilidades">
+
+<div class="container">
+
+
+<div class="section-heading centered">
+
+<div class="section-index">
+    03 / SKILLS
+</div>
+
+<p class="eyebrow reveal">
+    CONOCIMIENTOS
+</p>
+
+<h2 class="reveal">
+    Stack técnico
+</h2>
+
+<p class="reveal">
+
+    Conocimientos adquiridos mediante experiencia profesional,
+    proyectos y formación continua.
+
+</p>
+
+</div>
+
+
+<div class="skill-grid">
+
+
+<article class="skill-card reveal">
+
+<span class="skill-no">01</span>
+
+<div class="skill-icon">▣</div>
+
+<h3>
+    Soporte &amp; infraestructura
+</h3>
+
+<p>
+    Hardware, software, mantenimiento, instalación,
+    configuración y resolución de incidencias.
+</p>
+
+<div class="skill-tags">
+
+<span>Windows</span>
+<span>Hardware</span>
+<span>Help Desk</span>
+
+</div>
+
+</article>
+
+
+
+<article class="skill-card reveal">
+
+<span class="skill-no">02</span>
+
+<div class="skill-icon">⌁</div>
+
+<h3>
+    Redes
+</h3>
+
+<p>
+    TCP/IP, DNS, DHCP, VLAN, routing, switching,
+    Cisco y fundamentos de cableado.
+</p>
+
+<div class="skill-tags">
+
+<span>TCP/IP</span>
+<span>DNS</span>
+<span>DHCP</span>
+
+</div>
+
+</article>
+
+
+
+<article class="skill-card reveal">
+
+<span class="skill-no">03</span>
+
+<div class="skill-icon">
+    &lt;/&gt;
+</div>
+
+<h3>
+    Desarrollo web
+</h3>
+
+<p>
+    PHP, JavaScript, HTML5, CSS3, MySQL,
+    MVC, e-commerce y APIs REST.
+</p>
+
+<div class="skill-tags">
+
+<span>PHP</span>
+<span>JS</span>
+<span>MySQL</span>
+
+</div>
+
+</article>
+
+
+
+<article class="skill-card reveal">
+
+<span class="skill-no">04</span>
+
+<div class="skill-icon">⬡</div>
+
+<h3>
+    Ciberseguridad
+</h3>
+
+<p>
+    Análisis de tráfico, vulnerabilidades,
+    reconocimiento y pentesting controlado.
+</p>
+
+<div class="skill-tags">
+
+<span>Wireshark</span>
+<span>Nmap</span>
+<span>CTF</span>
+
+</div>
+
+</article>
+
+
+
+<article class="skill-card reveal">
+
+<span class="skill-no">05</span>
+
+<div class="skill-icon">◉</div>
+
+<h3>
+    Plataformas LMS
+</h3>
+
+<p>
+    Blackboard, Moodle, Templates, clonación
+    de cursos, módulos y restricciones.
+</p>
+
+<div class="skill-tags">
+
+<span>Blackboard</span>
+<span>Moodle</span>
+
+</div>
+
+</article>
+
+
+
+<article class="skill-card reveal">
+
+<span class="skill-no">06</span>
+
+<div class="skill-icon">▤</div>
+
+<h3>
+    Datos &amp; servicios
+</h3>
+
+<p>
+    MySQL, Workbench, Firebase Authentication,
+    Realtime Database y fundamentos de MongoDB.
+</p>
+
+<div class="skill-tags">
+
+<span>Firebase</span>
+<span>SQL</span>
+<span>MongoDB</span>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     FORMACIÓN
+================================ -->
+
+<section class="section credentials">
+
+<div class="container split credentials-grid">
+
+
+<div>
+
+<div class="section-index">
+    04 / EDUCATION
+</div>
+
+<p class="eyebrow reveal">
+    FORMACIÓN
+</p>
+
+<h2 class="reveal">
+    Aprendizaje continuo.
+</h2>
+
+
+<div class="credential reveal">
+
+<b>
+    Ingeniería en Sistemas y Tecnologías de la Información
+</b>
+
+<span>
+    IEU · 2022–2025
+</span>
+
+<small>
+    Título en trámite
+</small>
+
+</div>
+
+
+<div class="credential reveal">
+
+<b>
+    Técnico en Informática
+</b>
+
+<span>
+    CBTA 185 · 2007–2010
+</span>
+
+</div>
+
+</div>
+
+
+
+<div class="cert-list">
+
+
+<div class="cert reveal">
+
+<span>✓</span>
+
+<div>
+
+<b>
+    Hacker Ético
+</b>
+
+<small>
+    Cisco Networking Academy / IEU
+</small>
+
+</div>
+
+</div>
+
+
+<div class="cert reveal">
+
+<span>⌁</span>
+
+<div>
+
+<b>
+    Ethical Hacker Jr.
+</b>
+
+<small>
+    Cisco Networking Academy · En curso
+</small>
+
+</div>
+
+</div>
+
+
+<div class="cert reveal">
+
+<span>★</span>
+
+<div>
+
+<b>
+    Capture the Flag 2026
+</b>
+
+<small>
+    Cisco Networking Academy · Reconocimiento de logro
+</small>
+
+</div>
+
+</div>
+
+
+<div class="cert reveal">
+
+<span>+</span>
+
+<div>
+
+<b>
+    Formación complementaria
+</b>
+
+<small>
+    Inglés y actualización en ciberseguridad
+</small>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     PROYECTOS
+================================ -->
+
+<section class="section projects" id="proyectos">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="section-index">
+    05 / PROJECTS
+</div>
+
+<p class="eyebrow reveal">
+    PROYECTOS DESTACADOS
+</p>
+
+<h2 class="reveal">
+    Trabajo aplicado.
+</h2>
+
+</div>
+
+
+
+<div class="project-grid">
+
+
+<!-- INKTONER -->
+
+<article class="project-card reveal">
+
+<div class="project-visual code-grid">
+
+<span>&lt;/&gt;</span>
+
+<div class="orbit"></div>
+
+<div class="orbit two"></div>
+
+</div>
+
+
+<div class="project-info">
+
+<span class="project-type">
+    PROYECTO REAL · DESARROLLO WEB
+</span>
+
+
+<h3>
+    INKTONER WEB &amp; SYSTEM
+</h3>
+
+
+<p>
+
+    Desarrollo de sitio web empresarial para presentar
+    soluciones de soporte TI, impresión, desarrollo web,
+    POS y ciberseguridad.
+
+</p>
+
+
+<div class="chips">
+
+<span>HTML5</span>
+<span>CSS3</span>
+<span>JavaScript</span>
+<span>SEO</span>
+<span>Responsive</span>
+
+</div>
+
+
+<a
+    class="text-link"
+    href="https://abdielabrek69.github.io/inktoner/"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    Ver proyecto ↗
+
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- GEOLOCALIZACIÓN -->
+
+<article class="project-card reveal">
+
+<div class="project-visual mobile-visual">
+
+<div class="phone">
+
+<div class="map-dot"></div>
+
+<div class="map-route"></div>
+
+</div>
+
+<span>
+    GPS / MAPS
+</span>
+
+</div>
+
+
+<div class="project-info">
+
+<span class="project-type">
+    PRÁCTICAS PROFESIONALES
+</span>
+
+
+<h3>
+    App de geolocalización
+</h3>
+
+
+<p>
+
+    Aplicación para geolocalización y monitoreo
+    de activos, autenticación, datos y servicios
+    de mapas.
+
+</p>
+
+
+<div class="chips">
+
+<span>Android</span>
+<span>Firebase</span>
+<span>Maps</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- CIBERSEGURIDAD -->
+
+<article class="project-card reveal">
+
+<div class="project-visual security-visual">
+
+<div class="rings"></div>
+
+<span>
+    SECURITY
+</span>
+
+<div class="scan"></div>
+
+</div>
+
+
+<div class="project-info">
+
+<span class="project-type">
+    FORMACIÓN PRÁCTICA
+</span>
+
+
+<h3>
+    Laboratorios de ciberseguridad
+</h3>
+
+
+<p>
+
+    Prácticas de análisis de tráfico, reconocimiento
+    e identificación de vulnerabilidades en entornos
+    controlados.
+
+</p>
+
+
+<div class="chips">
+
+<span>Wireshark</span>
+<span>Nmap</span>
+<span>Metasploit</span>
+<span>CTF</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+
+
+<!-- GITHUB -->
+
+<div class="github-cta reveal">
+
+<div>
+
+<span class="eyebrow">
+    OPEN SOURCE / CODE
+</span>
+
+<h3>
+    Explora mi código.
+</h3>
+
+<p>
+    Repositorios, código fuente y proyectos
+    disponibles en GitHub.
+</p>
+
+</div>
+
+
+<a
+    class="btn primary"
+    href="https://github.com/abdielabrek69"
+    target="_blank"
+    rel="noopener">
+
+    GitHub ↗
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     FORMA DE TRABAJAR
+================================ -->
+
+<section class="section strengths">
+
+<div class="container strengths-grid">
+
+
+<div>
+
+<div class="section-index">
+    06 / APPROACH
+</div>
+
+<p class="eyebrow reveal">
+    MI FORMA DE TRABAJAR
+</p>
+
+<h2 class="reveal">
+
+    Resolver.<br>
+
+    <em>Aprender.</em><br>
+
+    Mejorar.
+
+</h2>
+
+</div>
+
+
+
+<div class="strength-list">
+
+
+<div class="reveal">
+
+<span>01</span>
+
+<p>
+
+<b>
+    Resolución de problemas
+</b>
+
+<small>
+    Diagnóstico ordenado y búsqueda
+    de soluciones prácticas.
+</small>
+
+</p>
+
+</div>
+
+
+
+<div class="reveal">
+
+<span>02</span>
+
+<p>
+
+<b>
+    Atención a usuarios
+</b>
+
+<small>
+    Comunicación clara, seguimiento
+    y orientación al servicio.
+</small>
+
+</p>
+
+</div>
+
+
+
+<div class="reveal">
+
+<span>03</span>
+
+<p>
+
+<b>
+    Análisis y organización
+</b>
+
+<small>
+    Priorización de tareas y seguimiento
+    de incidencias.
+</small>
+
+</p>
+
+</div>
+
+
+
+<div class="reveal">
+
+<span>04</span>
+
+<p>
+
+<b>
+    Adaptabilidad
+</b>
+
+<small>
+    Capacidad para aprender herramientas,
+    tecnologías y procesos.
+</small>
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     CONTACTO
+================================ -->
+
+<section class="contact" id="contacto">
+
+<div class="container contact-inner">
+
+
+<div>
+
+<div class="section-index">
+    07 / CONTACT
+</div>
+
+<p class="eyebrow reveal">
+    CONTACTO
+</p>
+
+<h2 class="reveal">
+
+    Construyamos algo<br>
+
+    <em>útil.</em>
+
+</h2>
+
+
+<p class="reveal">
+
+    Estoy interesado en oportunidades profesionales
+    relacionadas con soporte TI, infraestructura,
+    redes, sistemas y tecnología.
+
+</p>
+
+
+<a
+    class="btn primary reveal"
+    href="assets/CV_Abdiel_Castelan_Dominguez.pdf"
+    target="_blank"
+    rel="noopener">
+
+    Descargar CV ↗
+
+</a>
+
+</div>
+
+
+
+<div class="contact-links reveal">
+
+
+<a href="mailto:abdiel.abrek@gmail.com">
+
+    ✉ abdiel.abrek@gmail.com
+
+</a>
+
+
+<a href="tel:+522226955878">
+
+    ☏ 222 695 5878
+
+</a>
+
+
+<a
+    href="https://wa.me/522226955878?text=Hola%20Abdiel%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte."
+    target="_blank"
+    rel="noopener">
+
+    WhatsApp ↗
+
+</a>
+
+
+<a
+    href="https://github.com/abdielabrek69"
+    target="_blank"
+    rel="noopener">
+
+    github.com/abdielabrek69 ↗
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
 </main>
-<footer class="footer"><div class="container footer-inner"><a class="brand" href="#inicio"><span class="brand-mark">&lt;/&gt;</span><span><strong>ABDIEL <b>ABREK</b></strong><small>SYSTEMS &amp; IT</small></span></a><p>© <span id="year"></span> Abdiel Abrek · Systems &amp; IT</p></div></footer>
-</body></html>
+
+
+
+<!-- ================================
+     FOOTER
+================================ -->
+
+<footer class="footer">
+
+<div class="container footer-inner">
+
+
+<a class="brand" href="#inicio">
+
+<span class="brand-mark">
+    &lt;/&gt;
+</span>
+
+
+<span>
+
+<strong>
+    ABDIEL <b>ABREK</b>
+</strong>
+
+<small>
+    SYSTEMS &amp; IT
+</small>
+
+</span>
+
+</a>
+
+<p>
+
+    © <span id="year"></span>
+    Abdiel Abrek · Systems &amp; IT
+
+</p>
+
+</div>
+</footer>
+</body>
+
+</html>
