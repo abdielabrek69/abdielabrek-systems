@@ -1,0 +1,7 @@
+const $=(s,c=document)=>c.querySelector(s);const $$=(s,c=document)=>[...c.querySelectorAll(s)];
+$('#year').textContent=new Date().getFullYear();
+const menu=$('.menu-toggle'),links=$('.nav-links');menu?.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',open)});$$('.nav-links a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu?.setAttribute('aria-expanded','false')}));
+const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');reveal.unobserve(e.target)}}),{threshold:.12});$$('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${Math.min(i%5,4)*70}ms`;reveal.observe(el)});
+const sections=$$('main section[id]'),navs=$$('.nav-links a');const navObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){navs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===`#${e.target.id}`))}}),{rootMargin:'-35% 0px -55% 0px'});sections.forEach(s=>navObs.observe(s));
+const glow=$('.cursor-glow');window.addEventListener('pointermove',e=>{glow.style.left=`${e.clientX}px`;glow.style.top=`${e.clientY}px`},{passive:true});
+const words=['Soporte TI','Infraestructura','Redes','Desarrollo Web','Ciberseguridad'];let wi=0,ci=0,del=false;const typing=$('.typing');function type(){if(!typing)return;const word=words[wi];typing.textContent=word;if(!del){ci++;if(ci>=word.length){del=true;setTimeout(type,1100);return}}else{ci=0;del=false;wi=(wi+1)%words.length}setTimeout(type,del?35:75)}type();
