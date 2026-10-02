@@ -11,7 +11,7 @@ El sitio incorpora una experiencia visual interactiva desarrollada con **Three.j
 ## Portafolio
 
 **Sitio web:**
-https://abdielabrek69.github.io/abrek-systems/
+https://abdielabrek69.github.io/abdielabrek-systems/
 
 **GitHub:**
 https://github.com/abdielabrek69
