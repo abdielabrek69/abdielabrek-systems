@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+
+  <!-- Fondo -->
+  <rect width="64" height="64" rx="12" fill="#05070a"></rect>
+
+  <!-- Marco -->
+  <rect x="10" y="12" width="44" height="40" rx="6" fill="none" stroke="#2563eb" stroke-width="3"></rect>
+
+  <!-- < -->
+  <path d="M22 25l-8 7 8 7" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- > -->
+  <path d="M42 25l8 7-8 7" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- / -->
+  <path d="M36 21l-8 22" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round"></path>
+
+</svg>
