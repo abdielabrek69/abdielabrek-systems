@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
-<rect width="1200" height="700" fill="#eef4fa"/>
-<rect x="70" y="70" width="1060" height="560" rx="22" fill="#fff" stroke="#cbdbea" stroke-width="3"/>
-<rect x="70" y="70" width="1060" height="70" rx="22" fill="#0b2340"/>
-<circle cx="110" cy="105" r="9" fill="#5bbcff"/><circle cx="140" cy="105" r="9" fill="#7fc9f5"/><circle cx="170" cy="105" r="9" fill="#b5d8ef"/>
-<text x="600" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#10233e">CAPTURA REAL PENDIENTE</text>
-<text x="600" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#5a6f87">Espacio reservado para agregar evidencia visual del proyecto.</text>
-<text x="600" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#168cf0">No representa una captura del sistema.</text>
-</svg>
